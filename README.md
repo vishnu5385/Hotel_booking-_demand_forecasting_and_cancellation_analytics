@@ -18,4 +18,5 @@ This project analyzes hotel booking data to:
 ```bash
 pip install -r requirements.txt
 streamlit run app/app.py
+python main.py
   
