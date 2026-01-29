@@ -1,0 +1,103 @@
+============================================================
+PROJECT EXECUTION STARTED
+Output directory created: output
+Plots directory created: output\plots
+============================================================
+
+STEP 1 COMPLETED: Libraries imported successfully
+
+STEP 2 COMPLETED: Raw dataset loaded
+Dataset shape: (1000, 14)
+
+STEP 3 COMPLETED: Data types corrected (5 fields)
+
+STEP 4 COMPLETED: Cleaning pipeline applied
+
+STEP 5 COMPLETED: Feature engineering completed
+
+STEP 6 COMPLETED: EDA plots saved
+
+STEP 7 COMPLETED: Correlation analysis saved
+
+STEP 8: Statistical Insights
+
+Descriptive Statistics:
+         lead_time  ...  high_value_booking
+count  1000.000000  ...         1000.000000
+mean    182.682000  ...            0.273000
+std      67.273952  ...            0.445724
+min       0.000000  ...            0.000000
+25%     182.000000  ...            0.000000
+50%     186.000000  ...            0.000000
+75%     192.250000  ...            1.000000
+max     300.000000  ...            1.000000
+
+[8 rows x 15 columns]
+
+Overall Cancellation Rate:
+33.2
+
+Lead Time by Cancellation Status:
+is_canceled
+0    186.372754
+1    175.256024
+Name: lead_time, dtype: float64
+
+Average Price by Cancellation Status:
+is_canceled
+0    8138.099707
+1    8415.775758
+Name: price_per_night, dtype: float64
+
+Room Type Demand:
+room_type
+Standard    342
+Suite       342
+Deluxe      316
+Name: count, dtype: int64
+
+Average Stay Nights by Room Type:
+room_type
+Deluxe      7.110759
+Standard    7.608187
+Suite       7.616959
+Name: stay_nights, dtype: float64
+
+STEP 9 COMPLETED: Cleaned dataset saved
+
+STEP 10 COMPLETED: Stratified train-test split
+
+Baseline Model Performance:
+                 Model  Accuracy   ROC-AUC  Fit Time
+0  Logistic Regression      0.67  0.588874  0.019042
+1        Decision Tree      0.57  0.529229  0.013319
+2        Random Forest      0.67  0.551447  0.302775
+
+STEP 11 COMPLETED: Confusion matrix saved
+
+Feature Importance:
+                  Feature  Importance
+2             stay_nights    0.242758
+0               lead_time    0.231405
+1         price_per_night    0.213371
+5  previous_cancellations    0.119244
+3                  adults    0.110484
+4                children    0.082738
+
+STEP 13 COMPLETED: Learning curve saved
+
+STEP 14 COMPLETED: GridSearchCV finished
+Best Parameters: {'model__max_depth': 10, 'model__n_estimators': 100}
+
+STEP 15 COMPLETED: Model calibration done
+
+STEP 16 COMPLETED: Threshold optimization saved
+
+Paired t-test Results:
+t-statistic: 1.661435656684405
+p-value: 0.09820054213480978
+
+============================================================
+PROJECT COMPLETED SUCCESSFULLY 🎯
+Check 'output/' folder for logs and plots
+============================================================
